@@ -1,0 +1,5 @@
+conf-files/
+__pycache__/
+.vscode/
+
+*.iso
