@@ -2,7 +2,7 @@
 
 #-Draft Version: Ubuntu 18.04 + only-
 
-#---Admins should change values only in this area-------------------------
+#---Admins should change values only in this section----------------------
 #-General---
 PackUpdate = False
 VmId = "my-cloud-vm-1"
