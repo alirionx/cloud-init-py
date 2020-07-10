@@ -50,7 +50,7 @@ myNeededPyMods = NeededPyMods[os.name]
 
 isoBins = {
   "posix": "genisoimage",
-  "nt": "bin\\mkisofs.exe"
+  "nt": os.path.join(scriptDirPath, "bin", "mkisofs.exe")
 }
 NeededExecs = {
   "posix": [
@@ -203,7 +203,7 @@ yamlFileObj.close()
 #---Build the iso file----------------------------------------------------
 
 try: 
-  subprocess.call([isoBins[os.name], "-JR", "-V", "CIDATA", "-o", IsoFileName, confFilesDirName+"/"])
+  subprocess.call([isoBins[os.name], "-JR", "-V", "CIDATA", "-o", IsoFileName, confFilesDirPath+"/"])
 except:
   print("something went wrong while creating the iso file...")
 
